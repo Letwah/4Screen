@@ -51,22 +51,25 @@ const ProductCard = ({
               onClick={handleDecrement}
               disabled={!inStock || quantity <= 1}
             >
-              -
+              <p>-</p>
             </button>
-            <p>{quantity}</p>
+            <p class="number">{quantity}</p>
             <button onClick={handleIncrement} disabled={!inStock}>
-              +
+              <p>+</p>
             </button>
           </div>
         )}
-        <button
-          className={`addDefault  ${!inStock && "outOfStockButton"}`}
-          onClick={handleAddToCart}
-          disabled={!inStock || quantity === 0}
-        >
-          <img src={iconSrc} className="icon" alt="Basket Icon" />
-          <p>{buttonText}</p>
-        </button>
+        {showQuantityControl ||
+          (quantity <= 1 && (
+            <button
+              className={`addDefault  ${!inStock && "outOfStockButton"}`}
+              onClick={handleAddToCart}
+              disabled={!inStock || quantity === 0}
+            >
+              <img src={iconSrc} className="icon" alt="Basket Icon" />
+              <p>{buttonText}</p>
+            </button>
+          ))}
       </div>
     </div>
   );

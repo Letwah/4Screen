@@ -14,7 +14,7 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
-            quantity={0}
+            quantity={1}
             showQuantityControl={false}
           />
           <ProductCard
@@ -32,7 +32,16 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
-            quantity={1}
+            quantity={2}
+            showQuantityControl={true}
+          />
+          <ProductCard
+            title="Product 01"
+            price="£12.99"
+            buttonText="Add"
+            iconSrc={basketIcon}
+            inStock={true}
+            quantity={2}
             showQuantityControl={true}
           />
           <ProductCard
@@ -42,15 +51,6 @@ const Checkout = () => {
             iconSrc={basketIcon}
             inStock={true}
             quantity={1}
-            showQuantityControl={true}
-          />
-          <ProductCard
-            title="Product 01"
-            price="£12.99"
-            buttonText="Add"
-            iconSrc={basketIcon}
-            inStock={true}
-            quantity={0}
             showQuantityControl={false}
           />
           <ProductCard
@@ -59,7 +59,7 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
-            quantity={0}
+            quantity={1}
             showQuantityControl={false}
           />
         </div>

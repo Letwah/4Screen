@@ -91,8 +91,24 @@ nav {
 .card .priceCTA {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  gap: 5rem;
+  justify-content: space-between;
+}
+.card .priceCTA div.quantityControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-around;
+  width: 50%;
+}
+.card .priceCTA div.quantityControl button {
+  width: 30px;
+  height: 30px;
+  padding: 1.2rem;
+  justify-content: center;
+}
+.card .priceCTA div.quantityControl p.number {
+  margin: 0 1rem;
 }
 .card .priceCTA button.addDefault {
   border-radius: 1.5rem;
@@ -142,4 +158,56 @@ nav {
 
 div.card.outOfStock div.imagePlaceholder {
   background-color: #a9a8a7;
+}
+
+.contents.basket {
+  width: 100%;
+  height: 1920px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f3f2f0;
+  border-radius: 0.75rem;
+}
+
+.cartProduct {
+  border-top: 2px solid #a9a8a7;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr 4fr;
+  justify-items: start;
+  align-items: center;
+}
+
+.cartProduct:nth-child(3) {
+  border-bottom: 2px solid #a9a8a7;
+}
+
+.cartPlaceholder {
+  width: 100px;
+  height: 100px;
+  background-color: #a9a8a7;
+}
+
+.contents .bottomCTA {
+  justify-content: space-between;
+  padding: 0 2rem 2rem 2rem;
+}
+.contents .bottomCTA .outline {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.total {
+  display: flex;
+  margin-right: 4rem;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.discounts {
+  color: red;
+  font-size: x-small;
 }/*# sourceMappingURL=styles.css.map */
