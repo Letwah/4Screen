@@ -1,13 +1,37 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../features/appSlice";
+import { addToCart, setQuantity } from "../features/appSlice";
 
-const ProductCard = ({ title, price, buttonText, iconSrc, inStock }) => {
+const ProductCard = ({
+  title,
+  price,
+  buttonText,
+  iconSrc,
+  inStock,
+  quantity,
+  showQuantityControl,
+}) => {
+  console.log("showQuantityControl:", showQuantityControl);
   const dispatch = useDispatch();
 
+  // const quantity = useSelector(selectQuantity);
+
   const handleAddToCart = () => {
+    if (inStock && quantity > 0) {
+      dispatch(addToCart({ title, price, quantity }));
+      dispatch(setQuantity(0)); // reset quantity
+    }
+  };
+
+  const handleIncrement = () => {
     if (inStock) {
-      dispatch(addToCart({ title, price }));
+      dispatch(setQuantity(quantity + 1));
+    }
+  };
+
+  const handleDecrement = () => {
+    if (inStock && quantity > 0) {
+      dispatch(setQuantity(quantity - 1));
     }
   };
 
@@ -21,10 +45,24 @@ const ProductCard = ({ title, price, buttonText, iconSrc, inStock }) => {
       </div>
       <div className="priceCTA">
         <p>{price}</p>
+        {showQuantityControl && quantity > 1 && (
+          <div className="quantityControl">
+            <button
+              onClick={handleDecrement}
+              disabled={!inStock || quantity <= 1}
+            >
+              -
+            </button>
+            <p>{quantity}</p>
+            <button onClick={handleIncrement} disabled={!inStock}>
+              +
+            </button>
+          </div>
+        )}
         <button
           className={`addDefault  ${!inStock && "outOfStockButton"}`}
           onClick={handleAddToCart}
-          disabled={!inStock}
+          disabled={!inStock || quantity === 0}
         >
           <img src={iconSrc} className="icon" alt="Basket Icon" />
           <p>{buttonText}</p>

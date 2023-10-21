@@ -3,7 +3,7 @@ import { BASKET } from "../store/types";
 
 const initialState = {
   page: BASKET,
-  cart: [], // Add a cart array to keep track of added items
+  cart: [],
 };
 
 const appSlice = createSlice({
@@ -14,13 +14,20 @@ const appSlice = createSlice({
       state.page = action.payload;
     },
     addToCart: (state, action) => {
-      state.cart.push(action.payload);
+      return {
+        ...state,
+        cart: [...state.cart, action.payload],
+      };
+    },
+    setQuantity: (state, action) => {
+      state.quantity = action.payload;
     },
   },
 });
 
-export const { setPage, addToCart } = appSlice.actions;
+export const { setPage, addToCart, setQuantity } = appSlice.actions;
 export const selectPage = (state) => state.app.page;
 export const selectCart = (state) => state.app.cart;
+export const selectQuantity = (state) => state.app.quantity;
 
 export default appSlice.reducer;

@@ -14,6 +14,8 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
+            quantity={0}
+            showQuantityControl={false}
           />
           <ProductCard
             title="Product 01"
@@ -21,6 +23,8 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={false}
+            quantity={0}
+            showQuantityControl={false}
           />
           <ProductCard
             title="Product 01"
@@ -28,6 +32,8 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
+            quantity={1}
+            showQuantityControl={true}
           />
           <ProductCard
             title="Product 01"
@@ -35,6 +41,8 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
+            quantity={1}
+            showQuantityControl={true}
           />
           <ProductCard
             title="Product 01"
@@ -42,6 +50,8 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
+            quantity={0}
+            showQuantityControl={false}
           />
           <ProductCard
             title="Product 01"
@@ -49,6 +59,8 @@ const Checkout = () => {
             buttonText="Add"
             iconSrc={basketIcon}
             inStock={true}
+            quantity={0}
+            showQuantityControl={false}
           />
         </div>
         <div className="bottomCTA">
