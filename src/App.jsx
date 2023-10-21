@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { selectPage, setPage } from "./features/appSlice";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
+import Checkout from "./pages/Checkout";
+import Basket from "./pages/Basket";
+import Vending1 from "./pages/Vending1";
+import Vending2 from "./pages/Vending2";
+
+const App = () => {
+  const dispatch = useDispatch();
+  const page = useSelector(selectPage);
+
+  const getInitialData = async () => {
+    console.log(page);
+    dispatch(setPage());
+  };
+
+  useEffect(() => {
+    getInitialData();
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Basket />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/vending1" element={<Vending1 />} />
+          <Route path="/vending2" element={<Vending2 />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
-
-export default App
+  );
+};
+export default App;
