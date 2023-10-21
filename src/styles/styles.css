@@ -1,3 +1,7 @@
+.appCont {
+  padding: 0 2rem 2rem 2rem;
+}
+
 button {
   display: flex;
   flex-direction: row;
@@ -22,20 +26,37 @@ button:hover {
   color: #000000;
 }
 
+button:active {
+  transform: scale(0.95); /* Scale down when pressed */
+}
+
+nav {
+  background-color: #f3f2f0;
+}
+
 .contents {
-  width: 1080px;
+  width: 100%;
   max-height: 1920px;
-  border: 1px solid #000000;
+  margin-top: 2rem;
+}
+.contents .bottomCTA {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.contents .bottomCTA button {
+  font-size: 1.8rem;
 }
 
 .checkoutWrapper {
   background-color: #ffffff;
-}
-
-.imagePlaceholder {
-  background-color: #f3f2f0;
-  width: 262px;
-  height: 224px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  gap: 2rem;
+  width: 800px;
+  margin: 0 auto;
 }
 
 .card {
@@ -49,6 +70,23 @@ button:hover {
   height: 350px;
   margin: 0 auto;
   padding: 2.4rem 1.25rem;
+}
+.card .imagePlaceholder {
+  position: relative;
+  background-color: #f3f2f0;
+  width: 262px;
+  height: 224px;
+}
+.card .imagePlaceholder .outOfStockOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .card .priceCTA {
   display: flex;
@@ -77,4 +115,31 @@ button:hover {
 }
 .card .priceCTA button.addDefault:hover .icon {
   filter: invert(1);
+}
+.card button.addDefault.outOfStock.false {
+  background-color: #a9a8a7;
+}
+.card button.addDefault.outOfStock.false p {
+  white-space: nowrap;
+}
+
+.priceCTA button.addDefault.outOfStockButton {
+  background-color: #a9a8a7;
+}
+
+.priceCTA button.addDefault.outOfStockButton:active,
+.priceCTA button.addDefault.outOfStockButton:hover {
+  background-color: #a9a8a7;
+  border: none;
+  color: #f3f2f0;
+  transform: none;
+  transition: none;
+}
+.priceCTA button.addDefault.outOfStockButton:active .icon,
+.priceCTA button.addDefault.outOfStockButton:hover .icon {
+  filter: none;
+}
+
+div.card.outOfStock div.imagePlaceholder {
+  background-color: #a9a8a7;
 }/*# sourceMappingURL=styles.css.map */
