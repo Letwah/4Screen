@@ -1,0 +1,97 @@
+//variables
+$border-radius-primary: 0.25rem;
+$border-radius-secondary: 1.5rem;
+
+$base-font-size: 1rem;
+$background-color: #ffffff;
+$background-color-alt: #f3f2f0;
+$out-of-stock-bg-color: #a9a8a7;
+$background-color-dark: #221f20;
+$color: #000000;
+$color-light: #ffffff;
+$color-alt: #d75536;
+$btn-padding: 1rem 2rem;
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: $btn-padding;
+  border-radius: $border-radius-primary;
+  width: fit-content;
+  border: 0;
+  background-color: $background-color-dark;
+  color: $color-light;
+  transition: 0.3s ease;
+  font-size: 2rem;
+  height: 5rem;
+}
+
+button:hover {
+  background-color: $background-color;
+  border: 1px solid $color;
+  transition: 0.3s ease;
+  color: $color;
+}
+
+.contents {
+  width: 1080px;
+  max-height: 1920px;
+  border: 1px solid $color;
+}
+.checkoutWrapper {
+  background-color: $background-color;
+}
+
+.imagePlaceholder {
+  background-color: $background-color-alt;
+  width: 262px;
+  height: 224px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $background-color-alt;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 30px 0px $out-of-stock-bg-color;
+  width: 278px;
+  height: 350px;
+  margin: 0 auto;
+  padding: 2.4rem 1.25rem;
+
+  .priceCTA {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+
+    button.addDefault {
+      border-radius: $border-radius-secondary;
+
+      border: 0;
+      background-color: $background-color-dark;
+      color: $color-light;
+      transition: 0.3s ease;
+
+      font-size: 1.5rem;
+      height: 3rem;
+      .icon {
+        padding-right: 1rem;
+        width: 2rem;
+      }
+    }
+
+    button.addDefault:hover {
+      background-color: $background-color;
+      border: 1px solid $color;
+      transition: 0.3s ease;
+      color: $color;
+      .icon {
+        filter: invert(1);
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ import Checkout from "./pages/Checkout";
 import Basket from "./pages/Basket";
 import Vending1 from "./pages/Vending1";
 import Vending2 from "./pages/Vending2";
+import Header from "./components/Header";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const App = () => {
   return (
     <>
       <div className="App">
+        <Header />
         <Routes>
           <Route path="/" element={<Basket />} />
           <Route path="/checkout" element={<Checkout />} />
