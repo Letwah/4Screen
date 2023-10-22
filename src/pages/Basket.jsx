@@ -15,7 +15,9 @@ const Basket = () => {
               paddingLeft: "2rem",
             }}
           >
-            <h3>Order Summary</h3>
+            <h3 style={{ fontSize: "2rem", color: "#221f20be" }}>
+              Order Summary
+            </h3>
           </div>
           <div className="cartProduct">
             <div className="cartPlaceholder"></div>
@@ -49,9 +51,11 @@ const Basket = () => {
               Continue Shopping
             </button>
           </Link>
-          <button className="solid" id="payButton">
-            Pay and collect
-          </button>
+          <Link to="/Vending1">
+            <button className="solid" id="payButton">
+              Pay and collect
+            </button>
+          </Link>
         </div>
       </section>
     </>

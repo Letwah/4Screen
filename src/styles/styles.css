@@ -21,7 +21,7 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   border: 0;
-  background-color: #221f20;
+  background-color: rgba(34, 31, 32, 0.7450980392);
   color: #ffffff;
   transition: 0.3s ease;
   font-size: 2rem;
@@ -57,6 +57,7 @@ nav .logo {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding: 4rem 4rem;
 }
 .appCont .contents .bottomCTA {
   display: flex;
@@ -78,7 +79,7 @@ nav .logo {
 }
 .appCont .contents .bottomCTA_Basket .outline {
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: 2px solid #000000;
   color: #000000;
 }
 
@@ -87,14 +88,13 @@ nav .logo {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 2rem 2rem;
   background-color: #f3f2f0;
   border-radius: 0.75rem;
 }
 .basketWrapper .cartProduct,
 .checkoutWrapper .cartProduct {
-  border-top: 2px solid #a9a8a7;
+  border-top: 2px solid #d2d1cf;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 3fr 4fr;
@@ -173,7 +173,7 @@ nav .logo {
 .card .priceCTA button.addDefault {
   border-radius: 1.5rem;
   border: 0;
-  background-color: #221f20;
+  background-color: rgba(34, 31, 32, 0.7450980392);
   color: #ffffff;
   transition: 0.3s ease;
   font-size: 1.5rem;
@@ -228,9 +228,15 @@ div.card.outOfStock div.imagePlaceholder {
   justify-items: start;
   align-items: center;
 }
+.cartProduct .productName {
+  padding-left: 1.5rem;
+}
+.cartProduct .productPrice {
+  font-family: "Open Sans", sans-serif;
+}
 
 .cartProduct:nth-child(3) {
-  border-bottom: 2px solid #a9a8a7;
+  border-bottom: 2px solid #d2d1cf;
 }
 
 .cartPlaceholder {
@@ -241,7 +247,7 @@ div.card.outOfStock div.imagePlaceholder {
 
 .total {
   display: flex;
-  margin: 50rem 4rem 0 0;
+  margin: 50rem 6rem 0 0;
   flex-direction: column;
   align-items: flex-end;
   text-align: center;
@@ -311,7 +317,7 @@ div.card.outOfStock div.imagePlaceholder {
   border: 1px solid #f3f2f0;
   border-radius: 1rem;
   box-shadow: 0px 4px 30px 0px #a9a8a7;
-  background-color: #221f20;
+  background-color: rgba(34, 31, 32, 0.7450980392);
   width: 270px;
   height: 620px;
   margin: 2rem auto;

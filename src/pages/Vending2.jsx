@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/styles.css";
 
 const Vending2 = () => {
@@ -19,13 +20,13 @@ const Vending2 = () => {
               </div>
             </div>
             <div className="thumbCont">
-              <img src="src/assets/itemBlue.png" alt="blue item" />
+              <img src="src/assets/itemRed.png" alt="blue item" />
               <div className="numberItems">
                 <p>1</p>
               </div>
             </div>
             <div className="thumbCont">
-              <img src="src/assets/itemBlue.png" alt="blue item" />
+              <img src="src/assets/itemYellow.png" alt="blue item" />
               <div className="numberItems">
                 <p>1</p>
               </div>
@@ -36,10 +37,10 @@ const Vending2 = () => {
           </div>
 
           <div className="stars">
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
+            <img src="src/assets/ph_star-fill.svg" alt="stars Solid"></img>
+            <img src="src/assets/ph_star-fill.svg" alt="stars Solid"></img>
+            <img src="src/assets/ph_star-fill.svg" alt="stars Solid"></img>
+            <img src="src/assets/ph_star-fill.svg" alt="stars Solid"></img>
             <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
           </div>
 
@@ -56,7 +57,7 @@ const Vending2 = () => {
                 <img src="src/assets/dispenser.png" alt="Chevron Icon" />
               </div>
             </div>
-            <Link to="/Checkout">
+            <Link to="/checkout">
               <button className="collect">COLLECT HERE</button>
             </Link>
           </div>

@@ -8,7 +8,8 @@ $base-font-size: 1rem;
 $background-color: #ffffff;
 $background-color-alt: #f3f2f0;
 $out-of-stock-bg-color: #a9a8a7;
-$background-color-dark: #221f20;
+$line: #d2d1cf;
+$background-color-dark: #221f20be;
 $color: #000000;
 $color-light: #ffffff;
 $color-alt: #d75536;
@@ -74,6 +75,7 @@ nav {
     flex-direction: column;
     width: 100%;
     height: 100%;
+    padding: 4rem 4rem;
 
     .bottomCTA {
       display: flex;
@@ -94,7 +96,7 @@ nav {
       }
       .outline {
         background-color: $background-color;
-        border: 1px solid $color;
+        border: 2px solid $color;
         color: $color;
       }
     }
@@ -106,14 +108,13 @@ nav {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 2rem;
-  padding: 2rem;
+  margin: 2rem 2rem;
 
   background-color: $background-color-alt;
   border-radius: $border-radius-tertiary;
 
   .cartProduct {
-    border-top: 2px solid $out-of-stock-bg-color;
+    border-top: 2px solid $line;
     padding: 1rem 0;
     display: grid;
     grid-template-columns: 1fr 3fr 4fr;
@@ -123,6 +124,10 @@ nav {
     padding-left: 2rem;
   }
 }
+
+// .contents > .basketWrapper {
+//   padding: 2rem 4rem;
+// }
 
 .checkoutWrapper {
   background-color: $background-color;
@@ -266,10 +271,16 @@ div.card.outOfStock {
 
   justify-items: start;
   align-items: center;
+  .productName {
+    padding-left: 1.5rem;
+  }
+  .productPrice {
+    font-family: "Open Sans", sans-serif;
+  }
 }
 
 .cartProduct:nth-child(3) {
-  border-bottom: 2px solid $out-of-stock-bg-color;
+  border-bottom: 2px solid $line;
 }
 
 .cartPlaceholder {
@@ -280,7 +291,7 @@ div.card.outOfStock {
 
 .total {
   display: flex;
-  margin: 50rem 4rem 0 0;
+  margin: 50rem 6rem 0 0;
   flex-direction: column;
   align-items: flex-end;
   text-align: center;

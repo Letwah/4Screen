@@ -57,7 +57,7 @@ const Vending1 = () => {
                 <img src="src/assets/dispenser.png" alt="Chevron Icon" />
               </div>
             </div>
-            <Link to="/Checkout">
+            <Link to="/vending2">
               <button className="collect">COLLECT HERE</button>
             </Link>
           </div>
