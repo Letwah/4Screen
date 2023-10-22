@@ -1,12 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/styles.css";
 
 const Basket = () => {
   return (
     <>
-      <section className="contents basket">
+      <section className="contents ">
         <div className="basketWrapper">
-          <div classname="cartTitle">
+          <div
+            classname="cartTitle"
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              paddingLeft: "2rem",
+            }}
+          >
             <h3>Order Summary</h3>
           </div>
           <div className="cartProduct">
@@ -27,15 +35,20 @@ const Basket = () => {
               <p className="productPrice">£2.99</p>
             </div>
           </div>
+          <div className="total">
+            <div>
+              <p className="discounts">Discounts: £-0.50</p>
+              <p>Total £4.98</p>
+            </div>
+          </div>
         </div>
-        <div className="total">
-          <p className="discounts">Discounts: £-0.50</p>
-          <p>Total £2.99</p>
-        </div>
-        <div className="bottomCTA">
-          <button className="outline" id="ContButton">
-            Continue Shopping
-          </button>
+
+        <div className="bottomCTA_Basket">
+          <Link to="/Checkout">
+            <button className="outline" id="ContButton">
+              Continue Shopping
+            </button>
+          </Link>
           <button className="solid" id="payButton">
             Pay and collect
           </button>

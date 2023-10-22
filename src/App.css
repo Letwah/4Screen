@@ -1,12 +1,15 @@
 #root {
   max-width: 1080px;
+  height: 1920px;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   text-align: center;
   border: 2px solid #f3f2f0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
