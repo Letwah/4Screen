@@ -5,7 +5,7 @@ import "../styles/styles.css";
 const Vending2 = () => {
   return (
     <>
-      <section className="contents ">
+      <section className="contents vending">
         <div className="success1Cont">
           <div classname="cartTitle">
             <h3>Success</h3>

@@ -9,7 +9,7 @@ $background-color: #ffffff;
 $background-color-alt: #f3f2f0;
 $out-of-stock-bg-color: #a9a8a7;
 $line: #d2d1cf;
-$background-color-dark: #221f20be;
+$background-color-dark: #221f20;
 $color: #000000;
 $color-light: #ffffff;
 $color-alt: #d75536;
@@ -101,6 +101,10 @@ nav {
       }
     }
   }
+}
+
+.contents.vending {
+  padding: 0;
 }
 
 .basketWrapper,
