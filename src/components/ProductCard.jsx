@@ -1,6 +1,10 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { addToCart, setQuantity } from "../features/appSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  increaseQuantity,
+  removeQuantity,
+  selectCart,
+} from "../features/appSlice";
 
 const ProductCard = ({
   title,
@@ -10,29 +14,22 @@ const ProductCard = ({
   inStock,
   quantity,
   showQuantityControl,
+  id,
 }) => {
   console.log("showQuantityControl:", showQuantityControl);
   const dispatch = useDispatch();
+  const cart = useSelector(selectCart);
 
-  // const quantity = useSelector(selectQuantity);
-
-  const handleAddToCart = () => {
-    if (inStock && quantity > 0) {
-      dispatch(addToCart({ title, price, quantity }));
-      dispatch(setQuantity(0)); // reset quantity
-    }
-  };
+  const cartItem = cart.find((item) => {
+    return item.id === id;
+  });
 
   const handleIncrement = () => {
-    if (inStock) {
-      dispatch(setQuantity(quantity + 1));
-    }
+    dispatch(increaseQuantity(id));
   };
 
   const handleDecrement = () => {
-    if (inStock && quantity > 0) {
-      dispatch(setQuantity(quantity - 1));
-    }
+    dispatch(removeQuantity(id));
   };
 
   return (
@@ -45,31 +42,29 @@ const ProductCard = ({
       </div>
       <div className="priceCTA">
         <p>{price}</p>
-        {showQuantityControl && quantity > 1 && (
+        {/* {showQuantityControl && quantity > 1 && (
+          
+        )} */}
+        {showQuantityControl ? (
           <div className="quantityControl">
-            <button
-              onClick={handleDecrement}
-              disabled={!inStock || quantity <= 1}
-            >
+            <button onClick={handleDecrement}>
               <p>-</p>
             </button>
-            <p class="number">{quantity}</p>
+            <p class="number">{cartItem ? cartItem.quantity : 0}</p>
             <button onClick={handleIncrement} disabled={!inStock}>
               <p>+</p>
             </button>
           </div>
+        ) : (
+          <button
+            className={`addDefault  ${!inStock && "outOfStockButton"}`}
+            onClick={handleIncrement}
+            disabled={!inStock}
+          >
+            <img src={iconSrc} className="icon" alt="Basket Icon" />
+            <p>{buttonText}</p>
+          </button>
         )}
-        {showQuantityControl ||
-          (quantity <= 1 && (
-            <button
-              className={`addDefault  ${!inStock && "outOfStockButton"}`}
-              onClick={handleAddToCart}
-              disabled={!inStock || quantity === 0}
-            >
-              <img src={iconSrc} className="icon" alt="Basket Icon" />
-              <p>{buttonText}</p>
-            </button>
-          ))}
       </div>
     </div>
   );
