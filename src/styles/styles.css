@@ -82,6 +82,11 @@ nav .logo {
   border: 2px solid #000000;
   color: #000000;
 }
+.appCont .contents .bottomCTA_Basket .outline:hover {
+  background-color: #221f20;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
 
 .contents.vending {
   padding: 0;
