@@ -1,14 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { pageVariants } from "../store/pageVarients";
 import "../styles/styles.css";
 
 const Basket = () => {
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition="transition"
+      variants={pageVariants}
+    >
       <section className="contents ">
         <div className="basketWrapper">
           <div
-            classname="cartTitle"
+            className="cartTitle"
             style={{
               display: "flex",
               flexDirection: "row",
@@ -19,6 +27,7 @@ const Basket = () => {
               Order Summary
             </h3>
           </div>
+
           <div className="cartProduct">
             <div className="cartPlaceholder"></div>
             <div>
@@ -28,6 +37,7 @@ const Basket = () => {
               <p className="productPrice">£2.99</p>
             </div>
           </div>
+
           <div className="cartProduct">
             <div className="cartPlaceholder"></div>
             <div>
@@ -46,7 +56,7 @@ const Basket = () => {
         </div>
 
         <div className="bottomCTA_Basket">
-          <Link to="/Checkout">
+          <Link to="/">
             <button className="outline" id="ContButton">
               Continue Shopping
             </button>
@@ -58,7 +68,7 @@ const Basket = () => {
           </Link>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 };
 

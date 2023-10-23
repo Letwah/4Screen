@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { BASKET } from "../store/types";
+import { CHECKOUT } from "../store/types";
 
 const initialState = {
-  page: BASKET,
+  page: CHECKOUT,
   cart: [],
 };
 

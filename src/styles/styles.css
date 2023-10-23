@@ -42,6 +42,7 @@ button:active {
 nav {
   background-color: #f3f2f0;
   width: 100%;
+  height: 200px;
 }
 nav .logo {
   padding: 2rem;
@@ -49,15 +50,14 @@ nav .logo {
 
 .appCont {
   display: flex;
-  height: 1920px;
-  align-items: center;
+  height: 1720px;
+  justify-content: center;
 }
 .appCont .contents {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 4rem 4rem;
 }
 .appCont .contents .bottomCTA {
   display: flex;
@@ -71,8 +71,8 @@ nav .logo {
 .appCont .contents .bottomCTA_Basket {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0 4rem 4rem 4rem;
+  justify-content: space-around;
+  margin: 0 0 4rem 0;
 }
 .appCont .contents .bottomCTA_Basket button {
   font-size: 1.8rem;
@@ -90,6 +90,7 @@ nav .logo {
 
 .contents.vending {
   padding: 0;
+  width: 1080px;
 }
 
 .basketWrapper,
@@ -97,7 +98,7 @@ nav .logo {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 2rem 2rem;
+  margin: 4rem 4rem 2rem 4rem;
   background-color: #f3f2f0;
   border-radius: 0.75rem;
 }

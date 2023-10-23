@@ -1,10 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { pageVariants } from "../store/pageVarients";
 import "../styles/styles.css";
 
 const Vending1 = () => {
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition="transition"
+      variants={pageVariants}
+    >
       <section className="contents vending">
         <div className="success1Cont">
           <div classname="cartTitle">
@@ -13,20 +21,20 @@ const Vending1 = () => {
 
           <div className="thumbWrapper">
             <div className="thumbCont">
-              <img src="src/assets/itemBlue.png" alt="blue item" />
+              <img src="./assets/itemBlue.png" alt="blue item" />
 
               <div className="numberItems">
                 <p>1</p>
               </div>
             </div>
             <div className="thumbCont">
-              <img src="src/assets/itemBlue.png" alt="blue item" />
+              <img src="./assets/itemBlue.png" alt="blue item" />
               <div className="numberItems">
                 <p>1</p>
               </div>
             </div>
             <div className="thumbCont">
-              <img src="src/assets/itemBlue.png" alt="blue item" />
+              <img src="./assets/itemBlue.png" alt="blue item" />
               <div className="numberItems">
                 <p>1</p>
               </div>
@@ -37,11 +45,11 @@ const Vending1 = () => {
           </div>
 
           <div className="stars">
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
-            <img src="src/assets/ph_star-bold.svg" alt="stars Solid"></img>
+            <img src="./assets/star_shape.svg" alt="stars Solid"></img>
+            <img src="./assets/star_shape.svg" alt="stars Solid"></img>
+            <img src="./assets/star_shape.svg" alt="stars Solid"></img>
+            <img src="./assets/star_shape.svg" alt="stars Solid"></img>
+            <img src="./assets/star_shape.svg" alt="stars Solid"></img>
           </div>
 
           <div>
@@ -51,10 +59,10 @@ const Vending1 = () => {
             <div className="fridgeWindow"></div>
             <div className="fridgeIcons">
               <div className="chevrons">
-                <img src="src/assets/chevrons.svg" alt="Chevron Icon" />
+                <img src="./assets/chevrons.svg" alt="Chevron Icon" />
               </div>
               <div className="dispenser">
-                <img src="src/assets/dispenser.png" alt="Chevron Icon" />
+                <img src="./assets/dispenser.png" alt="Chevron Icon" />
               </div>
             </div>
             <Link to="/vending2">
@@ -63,7 +71,7 @@ const Vending1 = () => {
           </div>
         </div>
       </section>
-    </>
+    </motion.div>
   );
 };
 

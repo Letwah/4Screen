@@ -59,6 +59,7 @@ button:active {
 nav {
   background-color: $background-color-alt;
   width: 100%;
+  height: 200px;
 
   .logo {
     padding: 2rem;
@@ -67,15 +68,15 @@ nav {
 
 .appCont {
   display: flex;
-  height: 1920px;
-
-  align-items: center;
+  height: 1720px;
+  justify-content: center;
+  //  align-items: center;
   .contents {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 4rem 4rem;
+    // padding: 4rem 4rem;
 
     .bottomCTA {
       display: flex;
@@ -89,8 +90,8 @@ nav {
     .bottomCTA_Basket {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      margin: 0 4rem 4rem 4rem;
+      justify-content: space-around;
+      margin: 0 0 4rem 0;
       button {
         font-size: 1.8rem;
       }
@@ -110,6 +111,7 @@ nav {
 
 .contents.vending {
   padding: 0;
+  width: 1080px;
 }
 
 .basketWrapper,
@@ -117,7 +119,7 @@ nav {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 2rem 2rem;
+  margin: 4rem 4rem 2rem 4rem;
 
   background-color: $background-color-alt;
   border-radius: $border-radius-tertiary;
@@ -417,23 +419,3 @@ div.card.outOfStock {
     }
   }
 }
-
-///page transitions
-///
-// .fade-enter {
-//   opacity: 0.01;
-// }
-
-// .fade-enter-active {
-//   opacity: 1;
-//   transition: opacity 300ms ease-in;
-// }
-
-// .fade-exit {
-//   opacity: 1;
-// }
-
-// .fade-exit-active {
-//   opacity: 0.01;
-//   transition: opacity 300ms ease-in;
-// }

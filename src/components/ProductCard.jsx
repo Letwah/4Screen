@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   increaseQuantity,
   removeQuantity,
@@ -12,7 +13,7 @@ const ProductCard = ({
   buttonText,
   iconSrc,
   inStock,
-  quantity,
+
   showQuantityControl,
   id,
 }) => {
@@ -42,15 +43,13 @@ const ProductCard = ({
       </div>
       <div className="priceCTA">
         <p>{price}</p>
-        {/* {showQuantityControl && quantity > 1 && (
-          
-        )} */}
+
         {showQuantityControl ? (
           <div className="quantityControl">
             <button onClick={handleDecrement}>
               <p>-</p>
             </button>
-            <p class="number">{cartItem ? cartItem.quantity : 0}</p>
+            <p className="number">{cartItem ? cartItem.quantity : 0}</p>
             <button onClick={handleIncrement} disabled={!inStock}>
               <p>+</p>
             </button>
