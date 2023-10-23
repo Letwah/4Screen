@@ -5,12 +5,14 @@ $border-radius-secondary: 1.5rem;
 
 $background-color: #ffffff;
 $background-color-alt: #f3f2f0;
-$out-of-stock-bg-color: #a9a8a7;
+$out-of-stock-bg-color: #231f2059;
 $line: #d2d1cf;
-$background-color-dark: #221f20;
+$box-shadow-color: #6c686833;
+$box-shadow-alt: #ffffff40;
+$background-color-dark: #231f20;
 $color: #000000;
 $color-light: #ffffff;
-$color-alt: #d75536;
+$color-alt: #eb320a;
 $btn-padding: 1rem 2rem;
 
 body {
@@ -144,7 +146,8 @@ nav {
   align-items: center;
   border: 1px solid $background-color-alt;
   border-radius: 1rem;
-  box-shadow: 0px 4px 30px 0px $out-of-stock-bg-color;
+
+  box-shadow: 0px 4px 30px 0px $box-shadow-color;
   width: 278px;
   height: 350px;
   margin: 0 auto;
@@ -334,7 +337,7 @@ div.card.outOfStock {
           width: 40px;
           height: 40px;
           background-color: #ffffff;
-          box-shadow: 0px 2px 20px 0px $out-of-stock-bg-color;
+          box-shadow: 0px 2px 20px 0px $box-shadow-color;
           border-radius: $border-radius-primary;
           position: absolute;
           top: 12px;
@@ -366,7 +369,7 @@ div.card.outOfStock {
       align-items: center;
       border: 1px solid $background-color-alt;
       border-radius: 1rem;
-      box-shadow: 0px 4px 30px 0px $out-of-stock-bg-color;
+      box-shadow: 0px 4px 30px 0px $box-shadow-color;
       background-color: $background-color-dark;
       width: 270px;
       height: 620px;
@@ -399,13 +402,14 @@ div.card.outOfStock {
       button.collect {
         margin-top: 4rem;
         font-size: 1.25rem;
-        border: 2px solid $color-light;
+        border: 2.5px solid $color-light;
         border-radius: $border-radius-tertiary;
         background-color: $color;
+        box-shadow: 0px 4px 30px 0px $box-shadow-alt;
       }
       button.collect:hover {
-        color: #000000;
-        background-color: #ffffff;
+        color: $color;
+        background-color: $color-light;
       }
     }
   }

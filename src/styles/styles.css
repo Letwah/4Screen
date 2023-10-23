@@ -21,7 +21,7 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   border: 0;
-  background-color: #221f20;
+  background-color: #231f20;
   color: #ffffff;
   transition: 0.3s ease;
   font-size: 2rem;
@@ -83,7 +83,7 @@ nav .logo {
   color: #000000;
 }
 .appCont .contents .bottomCTA_Basket .outline:hover {
-  background-color: #221f20;
+  background-color: #231f20;
   color: #ffffff;
   transition: 0.3s ease;
 }
@@ -124,7 +124,7 @@ nav .logo {
   align-items: center;
   border: 1px solid #f3f2f0;
   border-radius: 1rem;
-  box-shadow: 0px 4px 30px 0px #a9a8a7;
+  box-shadow: 0px 4px 30px 0px rgba(108, 104, 104, 0.2);
   width: 278px;
   height: 350px;
   margin: 0 auto;
@@ -173,7 +173,7 @@ nav .logo {
 .card .priceCTA button.addDefault {
   border-radius: 1.5rem;
   border: 0;
-  background-color: #221f20;
+  background-color: #231f20;
   color: #ffffff;
   transition: 0.3s ease;
   font-size: 1.5rem;
@@ -193,19 +193,19 @@ nav .logo {
   filter: invert(1);
 }
 .card button.addDefault.outOfStock.false {
-  background-color: #a9a8a7;
+  background-color: rgba(35, 31, 32, 0.3490196078);
 }
 .card button.addDefault.outOfStock.false p {
   white-space: nowrap;
 }
 
 .priceCTA button.addDefault.outOfStockButton {
-  background-color: #a9a8a7;
+  background-color: rgba(35, 31, 32, 0.3490196078);
 }
 
 .priceCTA button.addDefault.outOfStockButton:active,
 .priceCTA button.addDefault.outOfStockButton:hover {
-  background-color: #a9a8a7;
+  background-color: rgba(35, 31, 32, 0.3490196078);
   border: none;
   color: #f3f2f0;
   transform: none;
@@ -217,7 +217,7 @@ nav .logo {
 }
 
 div.card.outOfStock div.imagePlaceholder {
-  background-color: #a9a8a7;
+  background-color: rgba(35, 31, 32, 0.3490196078);
 }
 
 .contents .basketWrapper .cartProduct {
@@ -232,7 +232,7 @@ div.card.outOfStock div.imagePlaceholder {
 .contents .basketWrapper .cartProduct .cartPlaceholder {
   width: 100px;
   height: 100px;
-  background-color: #a9a8a7;
+  background-color: rgba(35, 31, 32, 0.3490196078);
 }
 .contents .basketWrapper .cartProduct .productName {
   padding-left: 1.5rem;
@@ -287,7 +287,7 @@ div.card.outOfStock div.imagePlaceholder {
   width: 40px;
   height: 40px;
   background-color: #ffffff;
-  box-shadow: 0px 2px 20px 0px #a9a8a7;
+  box-shadow: 0px 2px 20px 0px rgba(108, 104, 104, 0.2);
   border-radius: 0.25rem;
   position: absolute;
   top: 12px;
@@ -314,8 +314,8 @@ div.card.outOfStock div.imagePlaceholder {
   align-items: center;
   border: 1px solid #f3f2f0;
   border-radius: 1rem;
-  box-shadow: 0px 4px 30px 0px #a9a8a7;
-  background-color: #221f20;
+  box-shadow: 0px 4px 30px 0px rgba(108, 104, 104, 0.2);
+  background-color: #231f20;
   width: 270px;
   height: 620px;
   margin: 2rem auto;
@@ -346,9 +346,10 @@ div.card.outOfStock div.imagePlaceholder {
 .contents .success1Cont .fridge button.collect {
   margin-top: 4rem;
   font-size: 1.25rem;
-  border: 2px solid #ffffff;
+  border: 2.5px solid #ffffff;
   border-radius: 0.75rem;
   background-color: #000000;
+  box-shadow: 0px 4px 30px 0px rgba(255, 255, 255, 0.2509803922);
 }
 .contents .success1Cont .fridge button.collect:hover {
   color: #000000;
