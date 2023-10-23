@@ -3,8 +3,6 @@ $border-radius-primary: 0.25rem;
 $border-radius-tertiary: 0.75rem;
 $border-radius-secondary: 1.5rem;
 
-$base-font-size: 1rem;
-
 $background-color: #ffffff;
 $background-color-alt: #f3f2f0;
 $out-of-stock-bg-color: #a9a8a7;
@@ -53,7 +51,7 @@ button:hover {
 }
 
 button:active {
-  transform: scale(0.95); /* Scale down when pressed */
+  transform: scale(0.95);
 }
 
 nav {
@@ -70,13 +68,12 @@ nav {
   display: flex;
   height: 1720px;
   justify-content: center;
-  //  align-items: center;
+
   .contents {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
-    // padding: 4rem 4rem;
 
     .bottomCTA {
       display: flex;
@@ -123,22 +120,7 @@ nav {
 
   background-color: $background-color-alt;
   border-radius: $border-radius-tertiary;
-
-  .cartProduct {
-    border-top: 2px solid $line;
-    padding: 1rem 0;
-    display: grid;
-    grid-template-columns: 1fr 3fr 4fr;
-
-    justify-items: start;
-    align-items: center;
-    padding-left: 2rem;
-  }
 }
-
-// .contents > .basketWrapper {
-//   padding: 2rem 4rem;
-// }
 
 .checkoutWrapper {
   background-color: $background-color;
@@ -148,8 +130,8 @@ nav {
 .gridCont {
   background-color: $background-color;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
   width: 800px;
 
@@ -190,7 +172,7 @@ nav {
   .priceCTA {
     display: flex;
     flex-direction: row;
-    // gap: 2rem;
+
     width: 280px;
     justify-content: space-between;
     align-items: center;
@@ -247,21 +229,25 @@ nav {
   }
 }
 
-//out of stock card
-.priceCTA button.addDefault.outOfStockButton {
-  background-color: $out-of-stock-bg-color;
+/////out of stock card
+.priceCTA {
+  button.addDefault.outOfStockButton {
+    background-color: $out-of-stock-bg-color;
+  }
 }
 
-.priceCTA button.addDefault.outOfStockButton:active,
-.priceCTA button.addDefault.outOfStockButton:hover {
-  background-color: $out-of-stock-bg-color;
-  border: none;
-  color: $background-color-alt;
-  transform: none;
-  transition: none;
+.priceCTA {
+  button.addDefault.outOfStockButton:active,
+  button.addDefault.outOfStockButton:hover {
+    background-color: $out-of-stock-bg-color;
+    border: none;
+    color: $background-color-alt;
+    transform: none;
+    transition: none;
 
-  .icon {
-    filter: none;
+    .icon {
+      filter: none;
+    }
   }
 }
 
@@ -272,49 +258,53 @@ div.card.outOfStock {
 }
 
 ///// Basket
-///
+.contents {
+  .basketWrapper {
+    .cartProduct {
+      border-top: 2px solid $line;
+      padding: 1rem 0;
+      display: grid;
+      grid-template-columns: 1fr 3fr 4fr;
+      margin: 0 2rem;
+      justify-items: start;
+      align-items: center;
+      .cartPlaceholder {
+        width: 100px;
+        height: 100px;
+        background-color: $out-of-stock-bg-color;
+      }
+      .productName {
+        padding-left: 1.5rem;
+      }
+      .productPrice {
+        font-family: "Open Sans", sans-serif;
+      }
+    }
 
-.cartProduct {
-  border-top: 2px solid $out-of-stock-bg-color;
-  padding: 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr 3fr 4fr;
+    .cartProduct:nth-child(3) {
+      border-bottom: 2px solid $line;
+    }
 
-  justify-items: start;
-  align-items: center;
-  .productName {
-    padding-left: 1.5rem;
+    .total {
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%;
+      padding: 0rem 4rem 6rem 0;
+
+      align-items: flex-end;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 0.8rem;
+      .discounts {
+        color: red;
+        font-size: 1.25rem;
+      }
+    }
   }
-  .productPrice {
-    font-family: "Open Sans", sans-serif;
-  }
 }
 
-.cartProduct:nth-child(3) {
-  border-bottom: 2px solid $line;
-}
+//vending pages
 
-.cartPlaceholder {
-  width: 100px;
-  height: 100px;
-  background-color: $out-of-stock-bg-color;
-}
-
-.total {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 100%;
-  padding: 0rem 4rem 6rem 0;
-
-  align-items: flex-end;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 0.8rem;
-}
-.discounts {
-  color: red;
-  font-size: 1.25rem;
-}
 .contents {
   .success1Cont {
     display: flex;
@@ -397,7 +387,6 @@ div.card.outOfStock {
           position: absolute;
           top: 30%;
           left: 40%;
-          //   transform: translate(-50%, -50%);
         }
 
         .dispenser {

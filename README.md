@@ -2,13 +2,50 @@
 
 This project is made with React + Vite.
 
-# install node >
+Project Title
 
-npm i
+This project involves creating screens and transitions using HTML/CSS, using the SASS pre-processor.
+I have built these screens and transitions in a React application.
 
-# run
+...
+
+Transitions
+Page transitions iimplemented with Framer Motion
+
+...
+
+Getting Started + Installing
+Please clone repo or download file, open and install node modules:
+
+npm install
+
+then
 
 npm run dev
+
+Prerequisites:
+
+node modules.
+
+Usage
+
+The project is navigated via the buttons and the header logo loads the initial screen.
+
+Built With:
+
+HTML
+CSS
+SASS
+React
+Redux
+Router
+Framer Motion
+Vite
+Toolkit
+
+By Colette Smith
+
+---
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

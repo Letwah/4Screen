@@ -36,7 +36,7 @@ button:hover {
 }
 
 button:active {
-  transform: scale(0.95); /* Scale down when pressed */
+  transform: scale(0.95);
 }
 
 nav {
@@ -102,16 +102,6 @@ nav .logo {
   background-color: #f3f2f0;
   border-radius: 0.75rem;
 }
-.basketWrapper .cartProduct,
-.checkoutWrapper .cartProduct {
-  border-top: 2px solid #d2d1cf;
-  padding: 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr 3fr 4fr;
-  justify-items: start;
-  align-items: center;
-  padding-left: 2rem;
-}
 
 .checkoutWrapper {
   background-color: #ffffff;
@@ -121,8 +111,8 @@ nav .logo {
 .gridCont {
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
   width: 800px;
   margin: 0 auto;
@@ -230,32 +220,30 @@ div.card.outOfStock div.imagePlaceholder {
   background-color: #a9a8a7;
 }
 
-.cartProduct {
-  border-top: 2px solid #a9a8a7;
+.contents .basketWrapper .cartProduct {
+  border-top: 2px solid #d2d1cf;
   padding: 1rem 0;
   display: grid;
   grid-template-columns: 1fr 3fr 4fr;
+  margin: 0 2rem;
   justify-items: start;
   align-items: center;
 }
-.cartProduct .productName {
-  padding-left: 1.5rem;
-}
-.cartProduct .productPrice {
-  font-family: "Open Sans", sans-serif;
-}
-
-.cartProduct:nth-child(3) {
-  border-bottom: 2px solid #d2d1cf;
-}
-
-.cartPlaceholder {
+.contents .basketWrapper .cartProduct .cartPlaceholder {
   width: 100px;
   height: 100px;
   background-color: #a9a8a7;
 }
-
-.total {
+.contents .basketWrapper .cartProduct .productName {
+  padding-left: 1.5rem;
+}
+.contents .basketWrapper .cartProduct .productPrice {
+  font-family: "Open Sans", sans-serif;
+}
+.contents .basketWrapper .cartProduct:nth-child(3) {
+  border-bottom: 2px solid #d2d1cf;
+}
+.contents .basketWrapper .total {
   display: flex;
   flex-direction: column-reverse;
   height: 100%;
@@ -265,8 +253,7 @@ div.card.outOfStock div.imagePlaceholder {
   font-size: 2rem;
   line-height: 0.8rem;
 }
-
-.discounts {
+.contents .basketWrapper .total .discounts {
   color: red;
   font-size: 1.25rem;
 }
