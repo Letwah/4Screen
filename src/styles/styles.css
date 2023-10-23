@@ -257,8 +257,9 @@ div.card.outOfStock div.imagePlaceholder {
 
 .total {
   display: flex;
-  margin: 50rem 6rem 0 0;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  height: 100%;
+  padding: 0rem 4rem 6rem 0;
   align-items: flex-end;
   text-align: center;
   font-size: 2rem;

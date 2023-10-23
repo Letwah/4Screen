@@ -29,7 +29,6 @@ const Checkout = () => {
               showQuantityControl={false}
               id={1}
             />
-
             <ProductCard
               title="Product 01"
               price="£12.99"
