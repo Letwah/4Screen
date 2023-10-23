@@ -2,19 +2,21 @@
 
 This project is made with React + Vite.
 
-Project Title
+## Project Title
 
 This project involves creating screens and transitions using HTML/CSS, using the SASS pre-processor.
 I have built these screens and transitions in a React application.
 
-...
+---
 
-Transitions
+## Transitions
+
 Page transitions iimplemented with Framer Motion
 
-...
+---
 
-Getting Started + Installing
+## Getting Started + Installing
+
 Please clone repo or download file, open and install node modules:
 
 npm install
@@ -23,27 +25,35 @@ then
 
 npm run dev
 
-Prerequisites:
+### Prerequisites:
 
 node modules.
 
-Usage
+### Usage
 
 The project is navigated via the buttons and the header logo loads the initial screen.
 
 Built With:
 
-HTML
-CSS
-SASS
-React
-Redux
-Router
-Framer Motion
-Vite
-Toolkit
+- HTML
+- CSS
+- SASS
+- React
+- React-Redux
+- React-Router
+- Framer Motion
+- @Vite
+- @Toolkit
 
 By Colette Smith
+
+## Demo
+
+https://aeguana-colette.netlify.app/
+
+## Documentation
+
+[Documentation](https://vitejs.dev/)
 
 ---
 
