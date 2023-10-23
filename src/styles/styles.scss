@@ -1,5 +1,5 @@
 //variables
-$border-radius-primary: 0.25rem;
+$border-radius-primary: 0.313rem;
 $border-radius-tertiary: 0.75rem;
 $border-radius-secondary: 1.5rem;
 
@@ -24,8 +24,8 @@ a {
 }
 
 h3 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 3.125rem;
+  font-weight: 600;
 }
 
 button {
@@ -59,7 +59,7 @@ button:active {
 nav {
   background-color: $background-color-alt;
   width: 100%;
-  height: 200px;
+  height: 220px;
 
   .logo {
     padding: 2rem;
@@ -68,7 +68,7 @@ nav {
 
 .appCont {
   display: flex;
-  height: 1720px;
+  height: 1700px;
   justify-content: center;
 
   .contents {
@@ -81,18 +81,29 @@ nav {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin: 0 0 4rem 0;
+      align-items: center;
+      // margin: 0 0 4rem 0;
+      height: 236px;
       button {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        width: 399px;
+        height: 90px;
+        justify-content: center;
       }
     }
     .bottomCTA_Basket {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
+      align-items: center;
       margin: 0 0 4rem 0;
+      height: 236px;
+      gap: 40px;
       button {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
+        width: 399px;
+        height: 90px;
+        justify-content: center;
       }
       .outline {
         background-color: $background-color;
@@ -113,12 +124,11 @@ nav {
   width: 1080px;
 }
 
-.basketWrapper,
-.checkoutWrapper {
+.basketWrapper {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 4rem 4rem 2rem 4rem;
+  margin: 6rem 4rem 0 4rem;
 
   background-color: $background-color-alt;
   border-radius: $border-radius-tertiary;
@@ -127,6 +137,7 @@ nav {
 .checkoutWrapper {
   background-color: $background-color;
   justify-content: center;
+  margin: 4rem 4rem 2rem 4rem;
 }
 
 .gridCont {
@@ -135,7 +146,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
-  width: 800px;
+  width: 750px;
 
   margin: 0 auto;
 }
@@ -151,12 +162,12 @@ nav {
   width: 278px;
   height: 350px;
   margin: 0 auto;
-  padding: 2.4rem 1.25rem;
+  padding: 2rem 1.25rem;
 
   .imagePlaceholder {
     position: relative;
     background-color: $background-color-alt;
-    width: 262px;
+    width: 266px;
     height: 224px;
 
     .outOfStockOverlay {
@@ -353,7 +364,8 @@ div.card.outOfStock {
       }
     }
     .feedback p {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
+      font-weight: 400;
       margin: 0;
     }
     .stars {

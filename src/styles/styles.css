@@ -7,8 +7,8 @@ a {
 }
 
 h3 {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 3.125rem;
+  font-weight: 600;
 }
 
 button {
@@ -17,7 +17,7 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  border-radius: 0.25rem;
+  border-radius: 0.313rem;
   width: -moz-fit-content;
   width: fit-content;
   border: 0;
@@ -42,7 +42,7 @@ button:active {
 nav {
   background-color: #f3f2f0;
   width: 100%;
-  height: 200px;
+  height: 220px;
 }
 nav .logo {
   padding: 2rem;
@@ -50,7 +50,7 @@ nav .logo {
 
 .appCont {
   display: flex;
-  height: 1720px;
+  height: 1700px;
   justify-content: center;
 }
 .appCont .contents {
@@ -63,19 +63,29 @@ nav .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0 0 4rem 0;
+  align-items: center;
+  height: 236px;
 }
 .appCont .contents .bottomCTA button {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  width: 399px;
+  height: 90px;
+  justify-content: center;
 }
 .appCont .contents .bottomCTA_Basket {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   margin: 0 0 4rem 0;
+  height: 236px;
+  gap: 40px;
 }
 .appCont .contents .bottomCTA_Basket button {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
+  width: 399px;
+  height: 90px;
+  justify-content: center;
 }
 .appCont .contents .bottomCTA_Basket .outline {
   background-color: #ffffff;
@@ -93,12 +103,11 @@ nav .logo {
   width: 1080px;
 }
 
-.basketWrapper,
-.checkoutWrapper {
+.basketWrapper {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin: 4rem 4rem 2rem 4rem;
+  margin: 6rem 4rem 0 4rem;
   background-color: #f3f2f0;
   border-radius: 0.75rem;
 }
@@ -106,6 +115,7 @@ nav .logo {
 .checkoutWrapper {
   background-color: #ffffff;
   justify-content: center;
+  margin: 4rem 4rem 2rem 4rem;
 }
 
 .gridCont {
@@ -114,7 +124,7 @@ nav .logo {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
-  width: 800px;
+  width: 750px;
   margin: 0 auto;
 }
 
@@ -128,12 +138,12 @@ nav .logo {
   width: 278px;
   height: 350px;
   margin: 0 auto;
-  padding: 2.4rem 1.25rem;
+  padding: 2rem 1.25rem;
 }
 .card .imagePlaceholder {
   position: relative;
   background-color: #f3f2f0;
-  width: 262px;
+  width: 266px;
   height: 224px;
 }
 .card .imagePlaceholder .outOfStockOverlay {
@@ -288,7 +298,7 @@ div.card.outOfStock div.imagePlaceholder {
   height: 40px;
   background-color: #ffffff;
   box-shadow: 0px 2px 20px 0px rgba(108, 104, 104, 0.2);
-  border-radius: 0.25rem;
+  border-radius: 0.313rem;
   position: absolute;
   top: 12px;
   left: 125px;
@@ -301,7 +311,8 @@ div.card.outOfStock div.imagePlaceholder {
   margin: 1.5rem;
 }
 .contents .success1Cont .feedback p {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 400;
   margin: 0;
 }
 .contents .success1Cont .stars img {
